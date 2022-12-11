@@ -13,16 +13,6 @@ string command;
 flag quit = false;
 
 // funcion
-int toUnicode(const char* str)
-{
-	return str[0] + (str[1] ? toUnicode(str + 1) : 0);
-}
-
-constexpr inline int caseString(const char* str)
-{
-	return str[0] + (str[1] ? caseString(str + 1) : 0);
-}
-
 void welcome()
 {
 	cout << "================================================" << endl;
