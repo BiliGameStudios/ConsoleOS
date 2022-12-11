@@ -13,6 +13,14 @@ string command;
 flag quit = false;
 
 // funcion
+void wait()
+{
+	for (long long i = 0; i <= 10000000000LL; i++)
+	{
+		continue;
+	}
+}
+
 void welcome()
 {
 	cout << "================================================" << endl;
@@ -26,10 +34,7 @@ void welcome()
 
 	cout << "System is booting, please wait..." << endl;
 
-	for (long long i = 0; i <= 10000000000LL; i++)
-	{
-		continue;
-	}
+	wait();
 
 	system("cls");
 }
@@ -40,10 +45,7 @@ void commandEvent(string command)
 	if (command == "exit" || command == "quit" || command == "shutdown")
 	{
 		cout << "System is shutting down, please wait..." << endl;
-		for (long long i = 0; i <= 10000000000LL; i++)
-		{
-			continue;
-		}
+		wait();
 		quit = true;
 	}
 }
